@@ -59,7 +59,7 @@ body {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 50px;
   height: 50px;
-  margin-top: 5px;
+  margin-top: 8px;
   background-color: #fff;
   margin-right: 10px;
 }
@@ -91,10 +91,13 @@ body {
   margin-left: 5%;
   line-height: 1.25;
 }
-#contact-profile {
+#contact-profile,
+#connect-profile,
+#person-skills {
   width: 100%;
 }
-.contact-item {
+.contact-item,
+.connect-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
