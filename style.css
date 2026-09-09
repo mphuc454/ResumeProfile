@@ -51,6 +51,7 @@ body {
 .experience-title,
 .education-title {
   font-size: 1.25rem;
+  color: rgb(54, 41, 66);
 }
 .title-profile {
   display: flex;
@@ -118,17 +119,22 @@ body {
 }
 #contact-profile,
 #connect-profile,
-#person-skills {
+#person-skills,
+#experience-profile,
+#education-profile {
   width: 100%;
 }
 .contact-item,
 .connect-item,
-.skills-item {
+.skills-item,
+.experience-item,
+.education-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.circle {
+.circle,
+.circle-right {
   border-radius: 80%;
   border-width: 2px;
   border-style: solid;
@@ -138,6 +144,10 @@ body {
   background-color: #fff;
   margin-right: 20px;
   margin-left: 5%;
+}
+.circle-right {
+  border-color: rgb(54, 41, 66);
+  background-color: rgb(54, 41, 66);
 }
 .mana-bar {
   width: 50%;
