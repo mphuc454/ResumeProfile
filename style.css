@@ -122,10 +122,12 @@ body {
 #person-skills,
 #experience-profile,
 #education-profile,
-#professional-profile {
+#professional-profile,
+#proficiency-profile {
   width: 100%;
 }
-#professional-profile {
+#professional-profile,
+#proficiency-profile {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 45px;
@@ -137,15 +139,18 @@ body {
 .skills-item,
 .experience-item,
 .education-item,
-.professional-item {
+.professional-item,
+.proficiency-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.professional-item {
+.professional-item,
+.proficiency-item {
   gap: 10px;
 }
-.professional-item p {
+.professional-item p,
+.proficiency-item p {
   font-size: 14px;
   white-space: nowrap;
 }
