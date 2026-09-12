@@ -121,17 +121,33 @@ body {
 #connect-profile,
 #person-skills,
 #experience-profile,
-#education-profile {
+#education-profile,
+#professional-profile {
   width: 100%;
 }
+#professional-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 45px;
+  row-gap: 18px;
+}
+
 .contact-item,
 .connect-item,
 .skills-item,
 .experience-item,
-.education-item {
+.education-item,
+.professional-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+.professional-item {
+  gap: 10px;
+}
+.professional-item p {
+  font-size: 14px;
+  white-space: nowrap;
 }
 .circle,
 .circle-right {
@@ -149,19 +165,32 @@ body {
   border-color: rgb(54, 41, 66);
   background-color: rgb(54, 41, 66);
 }
-.mana-bar {
-  width: 50%;
-  height: 18px;
+.mana-bar,
+.mana-bar-right {
+  width: 30%;
+  height: 14px;
   margin-left: auto;
   background-color: rgb(54, 41, 66);
   border: 2px solid #fff;
   border-radius: 30px;
 }
-.mana-fill {
+.mana-bar-right {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 2px solid rgb(54, 41, 66);
+  border-radius: 30px;
+  overflow: hidden;
+}
+.mana-fill,
+.mana-fill-right {
   height: 100%;
   width: 70%;
   background-color: #fff;
   border-radius: 30px;
   margin-right: -2px;
   flex: 1;
+}
+.mana-fill-right {
+  background-color: rgb(54, 41, 66);
 }
