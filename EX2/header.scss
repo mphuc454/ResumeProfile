@@ -1,0 +1,14 @@
+#header1{
+    background-color: $secondary-color;
+    height: 50px;
+    padding: 20px;
+
+}
+#header2{
+  background-color: $main-color;
+    height: 50px;  
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
