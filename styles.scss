@@ -1,0 +1,26 @@
+@import 'variables';
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: $backgroundColor;
+    color: $color_white;
+    justify-content: $center;
+    align-items: $center;
+}
+#container{
+  display: flex;
+  width: min(1200px, calc(100vw - 160px));
+  align-items: stretch;
+  margin: 80px;
+}
+#left {
+  flex: 0 0 35%;
+  background-color: $backgroundColor-left;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 25px;
+  margin-left: 3%;
+}
