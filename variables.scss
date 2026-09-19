@@ -4,3 +4,17 @@ $center: center;
 $backgroundColor-left: rgb(54, 41, 66);
 $hexagon: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 $width_full: 100%;
+@mixin flex-center-justify {
+  justify-content: $center;
+  align-items: $center;
+}
+@mixin flex-center-text {
+  align-items: $center;
+  text-align: $center;
+}
+@mixin item-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 14px;
+  white-space: nowrap;
+}

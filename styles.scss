@@ -6,8 +6,7 @@ body {
   display: flex;
   background: $backgroundColor;
   color: $color_white;
-  justify-content: $center;
-  align-items: $center;
+  @include flex-center-justify;
 }
 #container {
   display: flex;
@@ -19,8 +18,7 @@ body {
   flex: 0 0 35%;
   background-color: $backgroundColor-left;
   display: flex;
-  align-items: $center;
-  text-align: $center;
+  @include flex-center-text;
   flex-direction: column;
   padding: 25px;
   margin-left: 3%;
@@ -66,8 +64,7 @@ body {
 }
 .hexagon-icon {
   display: flex;
-  justify-content: $center;
-  align-items: $center;
+  @include flex-center-justify;
   clip-path: $hexagon;
   width: 50px;
   height: 50px;
@@ -77,8 +74,7 @@ body {
 }
 .hexagon-left {
   display: flex;
-  justify-content: $center;
-  align-items: $center;
+  @include flex-center-justify;
   clip-path: $hexagon;
   width: 50px;
   height: 50px;
@@ -87,8 +83,7 @@ body {
 }
 .hexagon-right {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center-justify;
   clip-path: $hexagon;
   width: 50px;
   height: 50px;
@@ -122,17 +117,17 @@ body {
   margin-left: 5%;
   line-height: 1.25;
 }
+
 #contact-profile,
 #connect-profile,
 #person-skills,
 #experience-profile,
-#education-profile,
-#professional-profile,
-#proficiency-profile {
+#education-profile {
   width: $width_full;
 }
 #professional-profile,
 #proficiency-profile {
+  @extend #connect-profile;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 45px;
@@ -142,26 +137,28 @@ body {
 .connect-item,
 .skills-item,
 .experience-item,
-.education-item,
-.professional-item,
-.proficiency-item {
+.education-item {
   display: flex;
   align-items: $center;
   justify-content: flex-start;
 }
 .professional-item,
 .proficiency-item {
+  @extend .connect-item;
   gap: 10px;
 }
-.professional-item p,
-.proficiency-item p {
-  flex: 1 1 auto;
-  min-width: 0;
-  font-size: 14px;
-  white-space: nowrap;
+.professional-item {
+  p {
+    @include item-text;
+  }
 }
-.circle,
-.circle-right {
+
+.proficiency-item {
+  p {
+    @include item-text;
+  }
+}
+.circle {
   flex: 0 0 10px;
   border-radius: 80%;
   border-width: 2px;
@@ -174,11 +171,11 @@ body {
   margin-left: 5%;
 }
 .circle-right {
+  @extend .circle;
   border-color: $backgroundColor-left;
   background-color: $backgroundColor-left;
 }
-.mana-bar,
-.mana-bar-right {
+.mana-bar {
   width: 30%;
   height: 14px;
   margin-left: auto;
@@ -187,6 +184,7 @@ body {
   border-radius: 30px;
 }
 .mana-bar-right {
+  @extend .mana-bar;
   flex-shrink: 0;
   box-sizing: border-box;
   background-color: $color_white;
@@ -194,8 +192,7 @@ body {
   border-radius: 30px;
   overflow: hidden;
 }
-.mana-fill,
-.mana-fill-right {
+.mana-fill {
   height: 100%;
   width: 70%;
   background-color: $color_white;
@@ -204,5 +201,6 @@ body {
   flex: 1;
 }
 .mana-fill-right {
+  @extend .mana-fill;
   background-color: $backgroundColor-left;
 }

@@ -143,11 +143,11 @@ body {
 
 #contact-profile,
 #connect-profile,
+#professional-profile,
+#proficiency-profile,
 #person-skills,
 #experience-profile,
-#education-profile,
-#professional-profile,
-#proficiency-profile {
+#education-profile {
   width: 100%;
 }
 
@@ -162,11 +162,11 @@ body {
 
 .contact-item,
 .connect-item,
+.professional-item,
+.proficiency-item,
 .skills-item,
 .experience-item,
-.education-item,
-.professional-item,
-.proficiency-item {
+.education-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -177,7 +177,13 @@ body {
   gap: 10px;
 }
 
-.professional-item p,
+.professional-item p {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
 .proficiency-item p {
   flex: 1 1 auto;
   min-width: 0;
@@ -185,8 +191,7 @@ body {
   white-space: nowrap;
 }
 
-.circle,
-.circle-right {
+.circle, .circle-right {
   flex: 0 0 10px;
   border-radius: 80%;
   border-width: 2px;
@@ -204,8 +209,7 @@ body {
   background-color: rgb(54, 41, 66);
 }
 
-.mana-bar,
-.mana-bar-right {
+.mana-bar, .mana-bar-right {
   width: 30%;
   height: 14px;
   margin-left: auto;
@@ -223,8 +227,7 @@ body {
   overflow: hidden;
 }
 
-.mana-fill,
-.mana-fill-right {
+.mana-fill, .mana-fill-right {
   height: 100%;
   width: 70%;
   background-color: white;
