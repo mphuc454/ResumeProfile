@@ -12,20 +12,18 @@ body {
 
 #container {
   display: flex;
-  width: min(1200px, 100vw - 160px);
+  width: 1200px;
   align-items: stretch;
   margin: 80px;
 }
 
 #left {
-  flex: 0 0 35%;
   background-color: rgb(54, 41, 66);
   display: flex;
   align-items: center;
   text-align: center;
   flex-direction: column;
   padding: 25px;
-  margin-left: 3%;
 }
 
 #right {
@@ -38,7 +36,6 @@ body {
 .hexagon {
   width: 150px;
   height: 150px;
-  overflow: hidden;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   background: #fff;
 }
@@ -46,7 +43,7 @@ body {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
@@ -156,7 +153,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   -moz-column-gap: 45px;
-       column-gap: 45px;
+  column-gap: 45px;
   row-gap: 18px;
 }
 
@@ -191,7 +188,8 @@ body {
   white-space: nowrap;
 }
 
-.circle, .circle-right {
+.circle,
+.circle-right {
   flex: 0 0 10px;
   border-radius: 80%;
   border-width: 2px;
@@ -209,7 +207,8 @@ body {
   background-color: rgb(54, 41, 66);
 }
 
-.mana-bar, .mana-bar-right {
+.mana-bar,
+.mana-bar-right {
   width: 30%;
   height: 14px;
   margin-left: auto;
@@ -227,7 +226,8 @@ body {
   overflow: hidden;
 }
 
-.mana-fill, .mana-fill-right {
+.mana-fill,
+.mana-fill-right {
   height: 100%;
   width: 70%;
   background-color: white;
@@ -238,4 +238,4 @@ body {
 
 .mana-fill-right {
   background-color: rgb(54, 41, 66);
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */
